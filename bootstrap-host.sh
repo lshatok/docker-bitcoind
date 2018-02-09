@@ -24,14 +24,14 @@ fi
 free -m
 
 if [ "$distro" = "xenial" -o "$distro" = "ubuntu:16.04" ]; then
-    curl https://get.docker.io/gpg | apt-key add -
+    curl http://get.docker.io/gpg | apt-key adv --fetch-keys -
     echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 
     # Handle other parallel cloud init scripts that may lock the package database
     # TODO: Add timeout
     while ! apt-get update; do sleep 10; done
 
-    while ! apt-get install -y lxc-docker; do sleep 10; done
+    while ! apt-get install -y --allow-unauthenticated lxc-docker; do sleep 10; done
 fi
 
 # Always clean-up, but fail successfully
