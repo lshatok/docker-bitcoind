@@ -56,9 +56,4 @@ Documentation
 
 * Additional documentation in the [docs folder](docs).
 # docker-bitcoind
-<<<<<<< HEAD
-# docker-bitcoind
-# docker-bitcoind
-=======
->>>>>>> a94812f6f3904b36a8f350b3161f02b127a75b4a
-# docker-bitcoind
+
