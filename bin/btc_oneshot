@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -ex
+
+# Generate bitcoin.conf
+<<<<<<< HEAD
+./btc_init
+=======
+btc_init
+>>>>>>> a94812f6f3904b36a8f350b3161f02b127a75b4a
+
+if [ $# -gt 0 ]; then
+    args=("$@")
+else
+    args=("-rpcallowip=::/0")
+fi
+
+exec bitcoind "${args[@]}"
