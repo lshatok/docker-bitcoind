@@ -1,10 +1,10 @@
-FROM debian:stretch-slim
+FROM ubuntu:xenial
 MAINTAINER Leo Shatokhin <lshatok@gmail.com>
 
 ARG USER_ID
 ARG GROUP_ID
 
-ENV HOME /bitcoin
+ENV HOME /home/bitcoin
 
 # add user with specified (or default) user/group ids
 ENV USER_ID ${USER_ID:-1000}
