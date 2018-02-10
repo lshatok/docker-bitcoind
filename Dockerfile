@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM debian:stretch-slim
 MAINTAINER Leo Shatokhin <lshatok@gmail.com>
 
 ARG USER_ID
